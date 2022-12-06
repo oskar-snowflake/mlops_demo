@@ -55,8 +55,8 @@ def load_data(session):
 
     # Display an interactive bar chart to visualize CO2 Emissions by Top N Countries
     with st.container():
-       st.subheader('CO2 Emissions by Top N Countries')
-      with st.expander(""):
+          st.subheader('CO2 Emissions by Top N Countries')
+       with st.expander(""):
           emissions_threshold = st.number_input(label='Emissions Threshold',min_value=5000, value=20000, step=5000)
           pd_df_co2_top_n = snow_df_co2.filter(col('Total CO2 Emissions') > emissions_threshold).toPandas()
           st.bar_chart(data=pd_df_co2_top_n.set_index('Location Name'), width=850, height=500, use_container_width=True)
