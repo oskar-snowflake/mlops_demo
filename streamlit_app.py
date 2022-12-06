@@ -39,8 +39,7 @@ def load_data(session):
     
     # Add header and a subheader
     st.header("Knoema: Environment Data Atlas")
-    st.subheader("Powered by Snowpark for Python and Snowflake Data Marketplace | Made with Streamlit")
-
+   
     # Use columns to display the three dataframes side-by-side along with their headers
     col1, col2, col3 = st.columns(3)
     with st.container():
