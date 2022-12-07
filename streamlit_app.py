@@ -1,3 +1,5 @@
+!pip install snowflake-snowpark-python
+
 # Import required libraries
 from snowflake.snowpark.session import Session
 from snowflake.snowpark.functions import avg, sum, col,lit
